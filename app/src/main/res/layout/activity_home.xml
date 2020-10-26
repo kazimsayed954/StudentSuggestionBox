@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kazim.studentsuggestionbox.HomeActivity">
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="21dp"
+        android:gravity="center_horizontal"
+        android:text="Name"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTv"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="43dp"
+        android:gravity="center_horizontal"
+        android:text="e@e.com"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/allSuggestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutBtn"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="320dp"
+        app:cornerRadius="30dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:theme="@style/NewAppTheme"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/suggestionbtn"
+        app:layout_constraintStart_toStartOf="@+id/suggestionbtn"
+        app:layout_constraintTop_toBottomOf="@+id/allSuggestion" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/suggestionbtn"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        app:cornerRadius="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="39dp"
+        android:text="File Suggestion"
+        android:textColor="@color/white"
+        android:theme="@style/NewAppTheme"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/allSuggestion"
+        app:layout_constraintEnd_toStartOf="@+id/allSuggestion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allSuggestion"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        app:cornerRadius="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="27dp"
+        android:text="Show All Suggestion"
+        android:textColor="@color/white"
+        android:theme="@style/NewAppTheme"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/logoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/suggestionbtn"
+        app:layout_constraintTop_toBottomOf="@+id/emailTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
